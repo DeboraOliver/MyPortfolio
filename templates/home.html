@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Debora Oliveira">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.1/examples/album/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Album example for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+      <style type="text/css">
+        :root {
+          --jumbotron-padding-y: 3rem;
+        }
+
+        .jumbotron {
+          padding-top: var(--jumbotron-padding-y);
+          padding-bottom: var(--jumbotron-padding-y);
+          margin-bottom: 0;
+          background-color: #fff;
+        }
+        @media (min-width: 768px) {
+          .jumbotron {
+            padding-top: calc(var(--jumbotron-padding-y) * 2);
+            padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+          }
+        }
+
+        .jumbotron p:last-child {
+          margin-bottom: 0;
+        }
+
+        .jumbotron-heading {
+          font-weight: 300;
+        }
+
+        .jumbotron .container {
+          max-width: 40rem;
+        }
+
+        footer {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+
+        footer p {
+          margin-bottom: .25rem;
+        }
+      </style>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About me</h4>
+              <p class="text-muted">I am a biomedical engineer and a python developer working with data analysis and software development for health-related companies. </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.linkedin.com/in/engdebora/" class="text-white">My LinkedIn</a></li>
+                <li><a href="https://github.com/DeboraOliver" class="text-white">My GitHub</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>My Portfolio</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">My work</h1>
+          <p class="lead text-muted">Welcome to my portfolio! Here you are going to find projects I worked on the past years in a diverse range of areas from data analysis to software development. Feel free to click on any button below to access a list of my projects organized by area.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Python Developer</a>
+            <a href="#" class="btn btn-secondary my-2">Data Analyst</a>
+            <a href="#" class="btn btn-primary my-2">FullStack Developer</a>
+          </p>
+        </div>
+      </section>
+
+      {% block content %}{% endblock %}
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.1/examples/album/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.1/examples/album/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/examples/album/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/examples/album/assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
