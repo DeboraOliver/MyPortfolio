@@ -97,9 +97,10 @@
           <h1 class="jumbotron-heading">My work</h1>
           <p class="lead text-muted">Welcome to my portfolio! Here you are going to find projects I worked on the past years in a diverse range of areas from data analysis to software development. Feel free to click on any button below to access a list of my projects organized by area.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Python Developer</a>
+            {% block jobs %}{% endblock %}
+            <!-- <a href="#" class="btn btn-primary my-2">Python Developer</a>
             <a href="#" class="btn btn-secondary my-2">Data Analyst</a>
-            <a href="#" class="btn btn-primary my-2">FullStack Developer</a>
+            <a href="#" class="btn btn-primary my-2">FullStack Developer</a>-->
           </p>
         </div>
       </section>

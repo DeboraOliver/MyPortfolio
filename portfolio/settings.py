@@ -39,8 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #My Apps
     'core.apps.CoreConfig',
+
+    #Third party apps
     'ckeditor',
+    'django_filters',
+    'multiselectfield', #selecting many fields
 ]
 
 MIDDLEWARE = [
