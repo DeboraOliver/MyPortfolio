@@ -6,8 +6,8 @@ app_name= 'core'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    #path('jobs/', views.post_list, name='post'),
-    #path('jobs/<int:stack>', views.post, name='post'),
-    path('job/<str:stack>/', views.post, name='post'),
+    path('data_analyst/', views.job_data, name='data'),
+    path('developer/', views.job_developer, name='developer'),
+    path('all/', views.job , name='all'),
 
 ]

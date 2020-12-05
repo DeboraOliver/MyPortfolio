@@ -1,4 +1,6 @@
 <!doctype html>
+{% load static %}
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,45 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-      <style type="text/css">
-        :root {
-          --jumbotron-padding-y: 3rem;
-        }
-
-        .jumbotron {
-          padding-top: var(--jumbotron-padding-y);
-          padding-bottom: var(--jumbotron-padding-y);
-          margin-bottom: 0;
-          background-color: #fff;
-        }
-        @media (min-width: 768px) {
-          .jumbotron {
-            padding-top: calc(var(--jumbotron-padding-y) * 2);
-            padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-          }
-        }
-
-        .jumbotron p:last-child {
-          margin-bottom: 0;
-        }
-
-        .jumbotron-heading {
-          font-weight: 300;
-        }
-
-        .jumbotron .container {
-          max-width: 40rem;
-        }
-
-        footer {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
-        }
-
-        footer p {
-          margin-bottom: .25rem;
-        }
-      </style>
+      <link href="{% static 'album.css' %}" rel="stylesheet" type ="text/css" />
   </head>
 
   <body>
@@ -97,10 +61,11 @@
           <h1 class="jumbotron-heading">My work</h1>
           <p class="lead text-muted">Welcome to my portfolio! Here you are going to find projects I worked on the past years in a diverse range of areas from data analysis to software development. Feel free to click on any button below to access a list of my projects organized by area.</p>
           <p>
-            {% block jobs %}{% endblock %}
-            <!-- <a href="#" class="btn btn-primary my-2">Python Developer</a>
-            <a href="#" class="btn btn-secondary my-2">Data Analyst</a>
-            <a href="#" class="btn btn-primary my-2">FullStack Developer</a>-->
+           <!-- {% block jobs %}{% endblock %}-->
+            <a href="/developer/" class="btn btn-primary my-2">Python Developer</a>
+            <a href="/data_analyst/" class="btn btn-primary my-2">Data Analyst</a>
+            <a href="/developer/" class="btn btn-primary my-2">FullStack Developer</a>
+            <a href="/all/" class="btn btn-secondary my-2">All</a>
           </p>
         </div>
       </section>
@@ -109,15 +74,32 @@
 
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+    <footer id="colophon" class="site-footer">
+      <div class="site-widget-area clear">
+        <div class="wrapper"><div class="row">
+          <div class="col col-three-1">
+            <div id="custom_html-2" class="widget_text widget widget_custom_html">
+              <div class="textwidget custom-html-widget">
+                <p><a href="/">Placeholder.com</a> is a free image placeholder service for web designers, serving billions of images per year.</p><p>
+                <a href="/about/">About</a> | <a href="/contact/">Contact</a> | <a href="/about/privacy/">Privacy</a> | <a href="/sitemap/">Sitemap</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col col-three-1">
+            <div id="custom_html-4" class="widget_text widget widget_custom_html">
+              <div class="textwidget custom-html-widget">
+              </div>
+            </div>
+          </div>
+          <div class="col col-three-1">
+            <div id="custom_html-3" class="widget_text widget widget_custom_html">
+              <h5 class="widget-title">Popular Placeholders</h5>
+              <div class="textwidget custom-html-widget"><ol>
+                <li><a href="https://placeholder.com/">Placeholder Images</a></li>
+                <li><a href="https://placeholder.com/text/lorem-ipsum/">Lorem Ipsum</a></li>
+                <li><a href="https://placeholder.com/text/">Dummy Text</a></li>
+                <li><a href="https://placeholder.com/stock-photos/">Free & Paid Stock Photos</a></li>
+              </ol></div></div></div></div></div></div><div class="site-info clear social-nav-disabled"><div class="wrapper"><div class="row"><div class="col col-five"></div><div class="col col-five"><div class="copyright-info"> © 2010-2019 Placeholder.com, formerly Placehold.it. <span class="sep"> | </span> Theme: Adventure Blog by <a href="http://unitedtheme.com/">Unitedtheme</a>.</div></div></div></div></div></footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

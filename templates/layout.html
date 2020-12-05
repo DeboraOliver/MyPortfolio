@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,56 +16,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-      <style type="text/css">
-        :root {
-          --jumbotron-padding-y: 3rem;
-        }
+    <link href="{% static 'album.css' %}" rel="stylesheet" type ="text/css" />
 
-        .jumbotron {
-          padding-top: var(--jumbotron-padding-y);
-          padding-bottom: var(--jumbotron-padding-y);
-          margin-bottom: 0;
-          background-color: #fff;
-        }
-        @media (min-width: 768px) {
-          .jumbotron {
-            padding-top: calc(var(--jumbotron-padding-y) * 2);
-            padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-          }
-        }
-
-        .jumbotron p:last-child {
-          margin-bottom: 0;
-        }
-
-        .jumbotron-heading {
-          font-weight: 300;
-        }
-
-        .jumbotron .container {
-          max-width: 40rem;
-        }
-
-        footer {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
-        }
-
-        footer p {
-          margin-bottom: .25rem;
-        }
-      </style>
   </head>
 
   <body>
 
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
+      <!--<div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About me</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              <p class="text-muted">I am a biomedical engineer and a python developer working with data analysis and software development for health-related companies. </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
@@ -76,16 +40,16 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <!--<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>-->
             <strong>My Portfolio</strong>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button>-->
         </div>
       </div>
     </header>
@@ -95,26 +59,26 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">My work</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p class="lead text-muted">Welcome to my portfolio! <br> Here you are going to find projects I worked on the past years in a diverse range of areas from data analysis to software development. Feel free to click on any button below to access a list of my projects organized by area.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Python Developer</a>
-            <a href="#" class="btn btn-secondary my-2">Data Analyst</a>
-            <a href="#" class="btn btn-primary my-2">FullStack Developer</a>
+            <a href="/developer/" class="btn btn-primary my-2">Python Developer</a>
+            <a href="/data_analyst/" class="btn btn-primary my-2">Data Analyst</a>
+            <a href="/developer/" class="btn btn-primary my-2">FullStack Developer</a>
+            <a href="/all/" class="btn btn-secondary my-2">All</a>
           </p>
         </div>
       </section>
 
       <div class="album py-5 bg-light">
         <div class="container">
-
           <div class="row">
-          {% for post in posts %}
+          {% for post in post %} <!--chama da view-->
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 {% if post.image %}
-                 <img class="card-img-top" data-src="{{ post.image }}" alt="{{ post.name }}">
+                  <img class="card-img-top" data-src="{{ post.image }}" alt="">
                 {% else %}
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 {% endif %}
                 <div class="card-body">
                   <p class="card-text">{{ post.summary }}</p>
@@ -137,15 +101,31 @@
 
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+    <div class="footer">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4 offset-md-1 py-4" >
+                  <h4 class="text-white">About me</h4>
+                  <p class="text-muted">My name is <b>Debora Oliveira</b>. I am a biomedical engineer, python developer and a creative seamtress (<i>on weekends</i>). I am passionated about data analysis and software development. </p>
+                </div>
+                <div class="col col-three-1"><div id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"></div></div></div>
+                  <div class="col-sm-4 offset-md-1 py-4">
+                    <div id="custom_html-3" class="widget_text widget widget_custom_html">
+                      <h4 class="text-white" >Contact</h4>
+                          <div class="textwidget custom-html-widget"><ol>
+                            <li><a href="https://www.linkedin.com/in/engdebora/" class="text-white">My LinkedIn</a></li>
+                            <li><a href="https://github.com/DeboraOliver" class="text-white">My GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/engdebora/" class="text-white">Email me</a></li>
+                          </ol></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
