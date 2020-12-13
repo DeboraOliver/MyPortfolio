@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = []
 
@@ -164,3 +164,6 @@ except ImportError:
     #raise Exception("A local_settings.py file is required to run this project")
 
 django_on_heroku.settings(locals())
+
+DISABLE_COLLECTSTATIC=1
+
